@@ -1,7 +1,10 @@
 class HipController < ApplicationController
+  
   def hop
-  end
+  	@songs = Song.order(rating: :desc).limit(5)
 
+  end
+  	
   def about
   end
 end
